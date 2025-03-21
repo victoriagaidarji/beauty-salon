@@ -1,0 +1,14 @@
+E:\ЭФ 301\Вика\Photos\Photo.Data\bin\Debug\net8.0\Photo.Data.deps.json
+E:\ЭФ 301\Вика\Photos\Photo.Data\bin\Debug\net8.0\Photo.Data.dll
+E:\ЭФ 301\Вика\Photos\Photo.Data\bin\Debug\net8.0\Photo.Data.pdb
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\Photo.Data.csproj.AssemblyReference.cache
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\Photo.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\Photo.Data.AssemblyInfoInputs.cache
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\Photo.Data.AssemblyInfo.cs
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\Photo.Data.csproj.CoreCompileInputs.cache
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\Photo.Data.dll
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\refint\Photo.Data.dll
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\Photo.Data.pdb
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\ref\Photo.Data.dll
+E:\ЭФ 301\Вика\Photos\Photo.Data\bin\Debug\net8.0\Photo.Data.runtimeconfig.json
+E:\ЭФ 301\Вика\Photos\Photo.Data\obj\Debug\net8.0\Photo.Data.genruntimeconfig.cache
