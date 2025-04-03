@@ -1,0 +1,17 @@
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\Photo.Service.csproj.AssemblyReference.cache
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\Photo.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\Photo.Service.AssemblyInfoInputs.cache
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\Photo.Service.AssemblyInfo.cs
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\Photo.Service.csproj.CoreCompileInputs.cache
+E:\ЭФ 301\Вика\Photos\Photo.Service\bin\Debug\net8.0\Photo.Service.deps.json
+E:\ЭФ 301\Вика\Photos\Photo.Service\bin\Debug\net8.0\Photo.Service.runtimeconfig.json
+E:\ЭФ 301\Вика\Photos\Photo.Service\bin\Debug\net8.0\Photo.Service.dll
+E:\ЭФ 301\Вика\Photos\Photo.Service\bin\Debug\net8.0\Photo.Service.pdb
+E:\ЭФ 301\Вика\Photos\Photo.Service\bin\Debug\net8.0\Photo.Data.dll
+E:\ЭФ 301\Вика\Photos\Photo.Service\bin\Debug\net8.0\Photo.Data.pdb
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\Photo.Se.F0F5F372.Up2Date
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\Photo.Service.dll
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\refint\Photo.Service.dll
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\Photo.Service.pdb
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\Photo.Service.genruntimeconfig.cache
+E:\ЭФ 301\Вика\Photos\Photo.Service\obj\Debug\net8.0\ref\Photo.Service.dll

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photos", "Photos\Photos.csproj", "{02FF6088-7DC5-4958-B3A8-94F2D3BADFDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photo.Data", "Photo.Data\Photo.Data.csproj", "{43BBBF78-0ABC-44FE-9A75-DCC48D1F0D48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OA.Repo", "OA.Repo\OA.Repo.csproj", "{2C0166CB-42DF-4403-9F83-A16D5CE26305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photo.Service", "Photo.Service\Photo.Service.csproj", "{D01FEC1C-804C-4B71-AEB8-B588E3E96087}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{7DEB1A55-BFE0-4274-85AB-F5C7A573CD43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photo.Infrastructure", "Photo.Infrastructure\Photo.Infrastructure.csproj", "{B4015775-F006-45DD-85FA-BBC3AF5ABD51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pictures.API", "Pictures.API\Pictures.API.csproj", "{42473FE2-8514-44AB-A65D-46873E2B393D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pictures.DependencyInjection", "Pictures.DependencyInjection\Pictures.DependencyInjection.csproj", "{B136FD2E-617D-4F90-A465-380D919011CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02FF6088-7DC5-4958-B3A8-94F2D3BADFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02FF6088-7DC5-4958-B3A8-94F2D3BADFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02FF6088-7DC5-4958-B3A8-94F2D3BADFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02FF6088-7DC5-4958-B3A8-94F2D3BADFDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43BBBF78-0ABC-44FE-9A75-DCC48D1F0D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BBBF78-0ABC-44FE-9A75-DCC48D1F0D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BBBF78-0ABC-44FE-9A75-DCC48D1F0D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BBBF78-0ABC-44FE-9A75-DCC48D1F0D48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0166CB-42DF-4403-9F83-A16D5CE26305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0166CB-42DF-4403-9F83-A16D5CE26305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0166CB-42DF-4403-9F83-A16D5CE26305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0166CB-42DF-4403-9F83-A16D5CE26305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D01FEC1C-804C-4B71-AEB8-B588E3E96087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D01FEC1C-804C-4B71-AEB8-B588E3E96087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D01FEC1C-804C-4B71-AEB8-B588E3E96087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D01FEC1C-804C-4B71-AEB8-B588E3E96087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4015775-F006-45DD-85FA-BBC3AF5ABD51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4015775-F006-45DD-85FA-BBC3AF5ABD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4015775-F006-45DD-85FA-BBC3AF5ABD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4015775-F006-45DD-85FA-BBC3AF5ABD51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42473FE2-8514-44AB-A65D-46873E2B393D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42473FE2-8514-44AB-A65D-46873E2B393D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42473FE2-8514-44AB-A65D-46873E2B393D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42473FE2-8514-44AB-A65D-46873E2B393D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B136FD2E-617D-4F90-A465-380D919011CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B136FD2E-617D-4F90-A465-380D919011CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B136FD2E-617D-4F90-A465-380D919011CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B136FD2E-617D-4F90-A465-380D919011CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B4015775-F006-45DD-85FA-BBC3AF5ABD51} = {7DEB1A55-BFE0-4274-85AB-F5C7A573CD43}
+		{42473FE2-8514-44AB-A65D-46873E2B393D} = {7DEB1A55-BFE0-4274-85AB-F5C7A573CD43}
+		{B136FD2E-617D-4F90-A465-380D919011CC} = {7DEB1A55-BFE0-4274-85AB-F5C7A573CD43}
+	EndGlobalSection
+EndGlobal
