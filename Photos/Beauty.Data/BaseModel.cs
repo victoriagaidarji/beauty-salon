@@ -1,4 +1,4 @@
-﻿namespace Photo.Data;
+﻿namespace Beauty.Data;
 
 public abstract class BaseModel
 {

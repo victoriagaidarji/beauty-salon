@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ЭФ 301\\Вика\\Photos\\Photo.Data\\Photo.Data.csproj": {}
+    "E:\\EF_301\\Rustam\\Beauty\\Photos\\Photo.Data\\Photo.Data.csproj": {}
   },
   "projects": {
-    "E:\\ЭФ 301\\Вика\\Photos\\Photo.Data\\Photo.Data.csproj": {
+    "E:\\EF_301\\Rustam\\Beauty\\Photos\\Photo.Data\\Photo.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ЭФ 301\\Вика\\Photos\\Photo.Data\\Photo.Data.csproj",
+        "projectUniqueName": "E:\\EF_301\\Rustam\\Beauty\\Photos\\Photo.Data\\Photo.Data.csproj",
         "projectName": "Photo.Data",
-        "projectPath": "E:\\ЭФ 301\\Вика\\Photos\\Photo.Data\\Photo.Data.csproj",
-        "packagesPath": "C:\\Users\\Victoria\\.nuget\\packages\\",
-        "outputPath": "E:\\ЭФ 301\\Вика\\Photos\\Photo.Data\\obj\\",
+        "projectPath": "E:\\EF_301\\Rustam\\Beauty\\Photos\\Photo.Data\\Photo.Data.csproj",
+        "packagesPath": "C:\\Users\\Rustam\\.nuget\\packages\\",
+        "outputPath": "E:\\EF_301\\Rustam\\Beauty\\Photos\\Photo.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Victoria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rustam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
