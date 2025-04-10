@@ -1,29 +1,32 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Photo.Data;
+﻿using Beauty.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClassLibrary;
 
 public class ApplicationContext : DbContext
 {
-    public DbSet<Client> Clients { get; set; }
-    public DbSet<Picture> Pictures { get; set; }
-    public DbSet<Genre> Genres { get; set; }
-    public DbSet<Portfolio> Portfolios { get; set; }
-    public DbSet<Registration> Registrations { get; set; }
-    
+    public DbSet<User> Users { get; set; }
+    public DbSet<Service> Services { get; set; }
+    public DbSet<Master> Masters { get; set; }
+    public DbSet<MasterService> MasterServices { get; set; }
+    public DbSet<Appointment> Appointments { get; set; }
+    public DbSet<Payment> Payments { get; set; }
+    public DbSet<Salon> Salons { get; set; }
+
     /* public ApplicationContext(DbContextOptions<ApplicationContext> options)
     {
 
     }
     */
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql("Host=localhost;" +
                                  "Port=5432;" +
-                                 "Database=Photos;" +
+                                 "Database=Beauty;" +
                                  "Username=postgres;" +
                                  "Password=1");
+        
         /*var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
         optionsBuilder.UseNpgsql(connectionString);*/
        
