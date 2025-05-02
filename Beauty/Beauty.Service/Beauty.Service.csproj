@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Cinema.Service</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Beauty.Data\Beauty.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="13.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.10" />
+    </ItemGroup>
+
+</Project>

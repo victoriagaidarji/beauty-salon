@@ -1,6 +1,0 @@
-@Pictures.API_HostAddress = http://localhost:5049
-
-GET {{Pictures.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
