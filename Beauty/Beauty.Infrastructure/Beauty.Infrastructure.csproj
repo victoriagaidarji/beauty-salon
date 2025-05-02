@@ -4,7 +4,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Cinema.Infrastructure</RootNamespace>
+        <RootNamespace>Beauty.Infrastructure</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

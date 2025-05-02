@@ -1,9 +1,9 @@
-﻿using Cinema.Infrastructure;
-using Cinema.Infrastructure.Providers;
-using Cinema.Service.Interface;
+﻿using Beauty.Infrastructure;
+using Beauty.Infrastructure.Providers;
+using Beauty.Service.Interface;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Cinema.DependencyInjection;
+namespace Beauty.DependencyInjection;
 
 public static partial class ServiceCollectionExtensions
 {

@@ -2,8 +2,9 @@
 
 public class MasterProfessionalService
 {
-    public int MasterId { get; set; }
+    public Guid MasterId { get; set; }
     public Master Master { get; set; }
-    public int ServiceId { get; set; }
+
+    public Guid ProfessionalServiceId { get; set; }
     public ProfessionalService ProfessionalService { get; set; }
 }

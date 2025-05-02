@@ -1,9 +1,9 @@
 ﻿using System.Text;
-using Cinema.Infrastructure.Setting;
+using Beauty.Infrastructure.Setting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Cinema.DependencyInjection;
+namespace Beauty.DependencyInjection;
 
 public static partial class ServiceCollectionExtensions
 {

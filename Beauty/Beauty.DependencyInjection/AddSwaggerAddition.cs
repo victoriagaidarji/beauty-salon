@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Cinema.DependencyInjection;
+namespace Beauty.DependencyInjection;
 
 public static partial class ServiceCollectionExtensions
 {
