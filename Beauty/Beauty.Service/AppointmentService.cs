@@ -20,4 +20,9 @@ public class AppointmentService : BaseService<Appointment, AppointmentRequest, I
     {
         throw new NotImplementedException();
     }
+
+    public Task<object?> GetByIdAsync(int id, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
 }
