@@ -3,9 +3,8 @@ using Beauty.Service.ModelsRequest;
 
 namespace Beauty.Service.Interface
 {
-    public interface IMasterService : IBaseService<Master, ProfessionalServiceRequest>
+    public interface IMasterService : IBaseService<Master, MasterRequest>
     {
-        Task<List<Master>> GetByCategory(string category, CancellationToken cancellationToken);
-        
+        Task<List<Master>> GetMastersBySpecialization(string specialization, CancellationToken cancellationToken);
     }
 }

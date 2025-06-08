@@ -5,6 +5,6 @@ namespace Beauty.Service.Interface
 {
     public interface ISalonService : IBaseService<Salon, SalonRequest>
     {
-        Task<Salon?> GetByAddress(string address, CancellationToken cancellationToken);
+        Task<List<Salon>> GetByNameAsync(string name, CancellationToken cancellationToken);
     }
 }

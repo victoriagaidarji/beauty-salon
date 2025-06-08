@@ -3,31 +3,23 @@ using Beauty.Data;
 using Beauty.Service.Interface;
 using Beauty.Service.ModelsRequest;
 
-namespace Beauty.Service;
-
-public class MasterService : BaseService<Master, MasterRequest, IMasterProvider>, IMasterService
+namespace Beauty.Service
 {
-    private IMasterProvider _provider;
-    private IMapper _mapper;
-
-    public MasterService(IMasterProvider provider, IMapper mapper) : base(provider, mapper)
+    public class MasterService : BaseService<Master, MasterRequest, IMasterProvider>, IMasterService
     {
-        _provider = provider;
-        _mapper = mapper;
-    }
+        private readonly IMasterProvider _provider;
+        private readonly IMapper _mapper;
 
-    public Task<Guid> CreateAsync(ProfessionalServiceRequest entityRequest, CancellationToken cancellationToken)
-    {
-        throw new NotImplementedException();
-    }
+        public MasterService(IMasterProvider provider, IMapper mapper) : base(provider, mapper)
+        {
+            _provider = provider;
+            _mapper = mapper;
+        }
 
-    public Task<Master> UpdateAsync(ProfessionalServiceRequest entityRequest, CancellationToken cancellationToken)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<List<Master>> GetByCategory(string category, CancellationToken cancellationToken)
-    {
-        throw new NotImplementedException();
+        public async Task<List<Master>> GetMastersBySpecialization(string specialization, CancellationToken cancellationToken)
+        {
+            var allMasters = await _provider.GetAllAsync(cancellationToken);
+            return allMasters.Where(m => m.Specialization.Equals(specialization, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
     }
 }

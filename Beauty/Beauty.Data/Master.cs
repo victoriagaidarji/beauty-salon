@@ -6,6 +6,6 @@ public class Master : BaseModel
     public string Specialization { get; set; } = string.Empty;
     public int Experience { get; set; } // в годах
     public string PhotoUrl { get; set; } = string.Empty;
-    public List<MasterProfessionalService> MasterServices { get; set; } = new List<MasterProfessionalService>();
+    public List<MasterProcedure> MasterServices { get; set; } = new List<MasterProcedure>();
     public List<Appointment> Appointments { get; set; } = new List<Appointment>();
 }

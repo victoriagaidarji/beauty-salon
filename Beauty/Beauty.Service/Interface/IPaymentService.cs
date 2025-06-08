@@ -5,6 +5,6 @@ namespace Beauty.Service.Interface
 {
     public interface IPaymentService : IBaseService<Payment, PaymentRequest>
     {
-        Task<List<Payment>> GetPendingPayments(CancellationToken cancellationToken);
+        Task<Payment?> GetPaymentByAppointmentId(Guid appointmentId, CancellationToken cancellationToken);
     }
 }

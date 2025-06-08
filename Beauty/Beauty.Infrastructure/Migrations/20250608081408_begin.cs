@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Beauty.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class first : Migration
+    public partial class begin : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,7 +29,7 @@ namespace Beauty.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProfessionalServices",
+                name: "Procedures",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -43,7 +43,7 @@ namespace Beauty.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProfessionalServices", x => x.Id);
+                    table.PrimaryKey("PK_Procedures", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -81,25 +81,25 @@ namespace Beauty.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MasterServices",
+                name: "MasterProcedures",
                 columns: table => new
                 {
                     MasterId = table.Column<Guid>(type: "uuid", nullable: false),
-                    ProfessionalServiceId = table.Column<Guid>(type: "uuid", nullable: false)
+                    ProcedureId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MasterServices", x => new { x.MasterId, x.ProfessionalServiceId });
+                    table.PrimaryKey("PK_MasterProcedures", x => new { x.MasterId, x.ProcedureId });
                     table.ForeignKey(
-                        name: "FK_MasterServices_Masters_MasterId",
+                        name: "FK_MasterProcedures_Masters_MasterId",
                         column: x => x.MasterId,
                         principalTable: "Masters",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MasterServices_ProfessionalServices_ProfessionalServiceId",
-                        column: x => x.ProfessionalServiceId,
-                        principalTable: "ProfessionalServices",
+                        name: "FK_MasterProcedures_Procedures_ProcedureId",
+                        column: x => x.ProcedureId,
+                        principalTable: "Procedures",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -112,7 +112,7 @@ namespace Beauty.Infrastructure.Migrations
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
                     MasterId = table.Column<Guid>(type: "uuid", nullable: false),
                     ServiceId = table.Column<Guid>(type: "uuid", nullable: false),
-                    ProfessionalServiceId = table.Column<Guid>(type: "uuid", nullable: false),
+                    ProcedureId = table.Column<Guid>(type: "uuid", nullable: false),
                     DateTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Status = table.Column<string>(type: "text", nullable: false),
                     DataCreate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -128,9 +128,9 @@ namespace Beauty.Infrastructure.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Appointments_ProfessionalServices_ProfessionalServiceId",
-                        column: x => x.ProfessionalServiceId,
-                        principalTable: "ProfessionalServices",
+                        name: "FK_Appointments_Procedures_ProcedureId",
+                        column: x => x.ProcedureId,
+                        principalTable: "Procedures",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -170,9 +170,9 @@ namespace Beauty.Infrastructure.Migrations
                 column: "MasterId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Appointments_ProfessionalServiceId",
+                name: "IX_Appointments_ProcedureId",
                 table: "Appointments",
-                column: "ProfessionalServiceId");
+                column: "ProcedureId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Appointments_UserId",
@@ -180,9 +180,9 @@ namespace Beauty.Infrastructure.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MasterServices_ProfessionalServiceId",
-                table: "MasterServices",
-                column: "ProfessionalServiceId");
+                name: "IX_MasterProcedures_ProcedureId",
+                table: "MasterProcedures",
+                column: "ProcedureId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Payments_AppointmentId",
@@ -195,7 +195,7 @@ namespace Beauty.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "MasterServices");
+                name: "MasterProcedures");
 
             migrationBuilder.DropTable(
                 name: "Payments");
@@ -210,7 +210,7 @@ namespace Beauty.Infrastructure.Migrations
                 name: "Masters");
 
             migrationBuilder.DropTable(
-                name: "ProfessionalServices");
+                name: "Procedures");
 
             migrationBuilder.DropTable(
                 name: "Users");

@@ -6,9 +6,9 @@ namespace ClassLibrary;
 public class ApplicationContext : DbContext
 {
     public DbSet<User> Users { get; set; }
-    public DbSet<ProfessionalService> ProfessionalServices { get; set; }
+    public DbSet<Procedure> Procedures { get; set; }
     public DbSet<Master> Masters { get; set; }
-    public DbSet<MasterProfessionalService> MasterServices { get; set; }
+    public DbSet<MasterProcedure> MasterProcedures { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
     public DbSet<Payment> Payments { get; set; }
     public DbSet<Salon> Salons { get; set; }
@@ -32,18 +32,18 @@ public class ApplicationContext : DbContext
             .WithOne(p => p.Appointment)
             .HasForeignKey<Payment>(p => p.AppointmentId);
 
-        // 2. Настройка many-to-many Master ↔ ProfessionalService
-        modelBuilder.Entity<MasterProfessionalService>()
-            .HasKey(mps => new { mps.MasterId, mps.ProfessionalServiceId });
+        // 2. Настройка many-to-many Master ↔ Procedure
+        modelBuilder.Entity<MasterProcedure>()
+            .HasKey(mps => new { mps.MasterId, mps.ProcedureId });
 
-        modelBuilder.Entity<MasterProfessionalService>()
+        modelBuilder.Entity<MasterProcedure>()
             .HasOne(mps => mps.Master)
             .WithMany(m => m.MasterServices)
             .HasForeignKey(mps => mps.MasterId);
 
-        modelBuilder.Entity<MasterProfessionalService>()
-            .HasOne(mps => mps.ProfessionalService)
+        modelBuilder.Entity<MasterProcedure>()
+            .HasOne(mps => mps.Procedure)
             .WithMany(ps => ps.MasterServices)
-            .HasForeignKey(mps => mps.ProfessionalServiceId);
+            .HasForeignKey(mps => mps.ProcedureId);
     }
 }

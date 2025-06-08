@@ -1,6 +1,6 @@
 ### Описание таблицы сущностей   
 
-💆 **ProfessionalService** (Услуга)  
+💆 **Procedure** (Процедура)  
 - `id` – Уникальный идентификатор  
 - `name` – Название услуги  
 - `description` – Описание  
@@ -15,15 +15,15 @@
 - `experience` – Опыт (в годах)   
 - `photo_url` – Фото мастера  
 
-🔗 **Master_ProfessionalService** (Связь мастер-услуга)  
+🔗 **Master_Procedure** (Связь мастер-процедура)  
 - `master_id` – Связь с мастером  
-- `professional_service_id` – Связь с услугой  
+- `procedure_id` – Связь с услугой  
 
 📅 **Appointment** (Запись)  
 - `id` – Уникальный идентификатор  
 - `user_id` – Связь с клиентом  
 - `master_id` – Связь с мастером  
-- `professional_service_id` – Связь с услугой  
+- `procedure_id` – Связь с процедурой  
 - `datetime` – Дата и время записи  
 - `status` – Статус записи (запланирована, завершена, отменена)  
 
@@ -51,6 +51,6 @@
 ### Схема связей в БД:
 - User (1) — (M) Appointment
 - Master (1) — (M) Appointment
-- ProfessionalService (1) — (M) Appointment
+- Procedure (1) — (M) Appointment
 - Appointment (1) — (1) Payment
-- Master (M) — (M) ProfessionalService (через Master_ProfessionalService)
+- Master (M) — (M) Procedure (через Master_Procedure)

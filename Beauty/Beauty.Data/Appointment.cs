@@ -9,7 +9,7 @@ public class Appointment : BaseModel
     public Master Master { get; set; }
 
     public Guid ServiceId { get; set; }
-    public ProfessionalService ProfessionalService { get; set; }
+    public Procedure Procedure { get; set; }
 
     public DateTime DateTime { get; set; }
     public string Status { get; set; } = "Запланирована";

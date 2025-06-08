@@ -3,26 +3,27 @@ using Beauty.Data;
 using Beauty.Service.Interface;
 using Beauty.Service.ModelsRequest;
 
-namespace Beauty.Service;
-
-public class AppointmentService : BaseService<Appointment, AppointmentRequest, IAppointmentProvider>, IAppointmentService
+namespace Beauty.Service
 {
-    private IAppointmentProvider _provider;
-    private IMapper _mapper;
-
-    public AppointmentService(IAppointmentProvider provider, IMapper mapper) : base(provider, mapper)
+    public class AppointmentService : BaseService<Appointment, AppointmentRequest, IAppointmentProvider>, IAppointmentService
     {
-        _provider = provider;
-        _mapper = mapper;
-    }
+        private readonly IAppointmentProvider _provider;
+        private readonly IMapper _mapper;
 
-    public Task<List<Appointment>> GetByUserId(Guid userId, CancellationToken cancellationToken)
-    {
-        throw new NotImplementedException();
-    }
+        public AppointmentService(IAppointmentProvider provider, IMapper mapper) : base(provider, mapper)
+        {
+            _provider = provider;
+            _mapper = mapper;
+        }
 
-    public Task<object?> GetByIdAsync(int id, CancellationToken cancellationToken)
-    {
-        throw new NotImplementedException();
+        public async Task<List<Appointment>> GetAppointmentsByUser(Guid userId, CancellationToken cancellationToken)
+        {
+            return await _provider.GetByUserIdAsync(userId, cancellationToken);
+        }
+
+        public async Task<List<Appointment>> GetAppointmentsByMaster(Guid masterId, CancellationToken cancellationToken)
+        {
+            return await _provider.GetByMasterIdAsync(masterId, cancellationToken);
+        }
     }
 }

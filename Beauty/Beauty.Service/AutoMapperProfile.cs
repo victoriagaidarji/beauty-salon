@@ -10,7 +10,7 @@ public class AutoMapperProfile : Profile
     {
         CreateMap<User, UserRequest>().ReverseMap();
         CreateMap<Master, MasterRequest>().ReverseMap();
-        CreateMap<ProfessionalService, ProfessionalServiceRequest>().ReverseMap();
+        CreateMap<Procedure, ProcedureRequest>().ReverseMap();
         CreateMap<Appointment, AppointmentRequest>().ReverseMap();
         CreateMap<Payment, PaymentRequest>().ReverseMap();
         CreateMap<Salon, SalonRequest>().ReverseMap();

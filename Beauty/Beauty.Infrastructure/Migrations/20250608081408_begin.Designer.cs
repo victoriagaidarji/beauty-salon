@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Beauty.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250502080742_first")]
-    partial class first
+    [Migration("20250608081408_begin")]
+    partial class begin
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,7 +43,7 @@ namespace Beauty.Infrastructure.Migrations
                     b.Property<Guid>("MasterId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("ProfessionalServiceId")
+                    b.Property<Guid>("ProcedureId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("ServiceId")
@@ -60,7 +60,7 @@ namespace Beauty.Infrastructure.Migrations
 
                     b.HasIndex("MasterId");
 
-                    b.HasIndex("ProfessionalServiceId");
+                    b.HasIndex("ProcedureId");
 
                     b.HasIndex("UserId");
 
@@ -99,19 +99,19 @@ namespace Beauty.Infrastructure.Migrations
                     b.ToTable("Masters");
                 });
 
-            modelBuilder.Entity("Beauty.Data.MasterProfessionalService", b =>
+            modelBuilder.Entity("Beauty.Data.MasterProcedure", b =>
                 {
                     b.Property<Guid>("MasterId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("ProfessionalServiceId")
+                    b.Property<Guid>("ProcedureId")
                         .HasColumnType("uuid");
 
-                    b.HasKey("MasterId", "ProfessionalServiceId");
+                    b.HasKey("MasterId", "ProcedureId");
 
-                    b.HasIndex("ProfessionalServiceId");
+                    b.HasIndex("ProcedureId");
 
-                    b.ToTable("MasterServices");
+                    b.ToTable("MasterProcedures");
                 });
 
             modelBuilder.Entity("Beauty.Data.Payment", b =>
@@ -148,7 +148,7 @@ namespace Beauty.Infrastructure.Migrations
                     b.ToTable("Payments");
                 });
 
-            modelBuilder.Entity("Beauty.Data.ProfessionalService", b =>
+            modelBuilder.Entity("Beauty.Data.Procedure", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -180,7 +180,7 @@ namespace Beauty.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProfessionalServices");
+                    b.ToTable("Procedures");
                 });
 
             modelBuilder.Entity("Beauty.Data.Salon", b =>
@@ -257,9 +257,9 @@ namespace Beauty.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Beauty.Data.ProfessionalService", "ProfessionalService")
+                    b.HasOne("Beauty.Data.Procedure", "Procedure")
                         .WithMany("Appointments")
-                        .HasForeignKey("ProfessionalServiceId")
+                        .HasForeignKey("ProcedureId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -271,12 +271,12 @@ namespace Beauty.Infrastructure.Migrations
 
                     b.Navigation("Master");
 
-                    b.Navigation("ProfessionalService");
+                    b.Navigation("Procedure");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Beauty.Data.MasterProfessionalService", b =>
+            modelBuilder.Entity("Beauty.Data.MasterProcedure", b =>
                 {
                     b.HasOne("Beauty.Data.Master", "Master")
                         .WithMany("MasterServices")
@@ -284,15 +284,15 @@ namespace Beauty.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Beauty.Data.ProfessionalService", "ProfessionalService")
+                    b.HasOne("Beauty.Data.Procedure", "Procedure")
                         .WithMany("MasterServices")
-                        .HasForeignKey("ProfessionalServiceId")
+                        .HasForeignKey("ProcedureId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Master");
 
-                    b.Navigation("ProfessionalService");
+                    b.Navigation("Procedure");
                 });
 
             modelBuilder.Entity("Beauty.Data.Payment", b =>
@@ -318,7 +318,7 @@ namespace Beauty.Infrastructure.Migrations
                     b.Navigation("MasterServices");
                 });
 
-            modelBuilder.Entity("Beauty.Data.ProfessionalService", b =>
+            modelBuilder.Entity("Beauty.Data.Procedure", b =>
                 {
                     b.Navigation("Appointments");
 
