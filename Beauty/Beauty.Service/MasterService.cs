@@ -19,7 +19,23 @@ namespace Beauty.Service
         public async Task<List<Master>> GetMastersBySpecialization(string specialization, CancellationToken cancellationToken)
         {
             var allMasters = await _provider.GetAllAsync(cancellationToken);
-            return allMasters.Where(m => m.Specialization.Equals(specialization, StringComparison.OrdinalIgnoreCase)).ToList();
+            return allMasters
+                .Where(m => m.IsActive && m.Specialization.Equals(specialization, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
+
+        public async Task<bool> ChangeState(Guid id, CancellationToken cancellationToken)
+        {
+            var master = await _provider.FindAsync(id, cancellationToken);
+            if (master == null)
+                return false;
+
+            // Пример логики изменения состояния (предположим, есть поле IsActive)
+            master.IsActive = !master.IsActive;
+            master.DataUpdate = DateTime.Now;
+
+            await _provider.UpdateAsync(master, cancellationToken);
+            return true;
         }
     }
 }

@@ -45,5 +45,8 @@ public class ApplicationContext : DbContext
             .HasOne(mps => mps.Procedure)
             .WithMany(ps => ps.MasterServices)
             .HasForeignKey(mps => mps.ProcedureId);
+        
+        // Глобальный фильтр для мастеров — показывать только активных по умолчанию
+        modelBuilder.Entity<Master>().HasQueryFilter(m => m.IsActive);
     }
 }

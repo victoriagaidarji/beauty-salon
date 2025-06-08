@@ -8,5 +8,6 @@ namespace Beauty.Service.ModelsRequest
         public string Specialization { get; set; } = string.Empty;
         public int Experience { get; set; }
         public string PhotoUrl { get; set; } = string.Empty;
+        public bool IsActive { get; set; } = true;
     }
 }
